@@ -213,7 +213,11 @@ def predict():
         return render_template('result.html', prediction=formatted_pred)
     
     except Exception as e:
-        return f"<h3>Error: {str(e)}</h3><a href='/'>Back</a>"
+        import traceback
+        print("🔥 Exception occurred during prediction!")
+        traceback.print_exc()
+        return f"<h3>Error: {str(e)}</h3><a href='/'>Back</a>", 500
+
 
 print("App is starting...")
 if __name__ == '__main__':

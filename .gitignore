@@ -16,15 +16,6 @@ Thumbs.db
 # Logs
 *.log
 
-# Model files
-*.sav
-*.joblib
-
-# Data files (optional)
-*.csv
-*.xlsx
-*.json
-
 # IDE/editor config folders
 .vscode/
 .idea/
