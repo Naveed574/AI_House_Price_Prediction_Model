@@ -7,7 +7,7 @@ from tensorflow.keras.models import load_model
 app = Flask(__name__)
 
 # Load once at startup
-model = load_model("first_house_price_prediction_model.keras")
+model = load_model("first_house_price_prediction_model.h5")
 scaler = joblib.load('feature_scaler.pkl')
 original_columns = joblib.load('final_columns.pkl')  # 272 feature names
 y_scaler = joblib.load('label_scaler.pkl')
