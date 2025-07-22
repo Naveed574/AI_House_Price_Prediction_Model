@@ -216,5 +216,3 @@ def predict():
         return f"<h3>Error: {str(e)}</h3><a href='/'>Back</a>"
 
 print("App is starting...")
-if __name__ == '__main__':
-    app.run(debug=True)
