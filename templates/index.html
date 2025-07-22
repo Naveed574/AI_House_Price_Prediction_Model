@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Price Prediction</title>
+    <style>
+        h2 {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            margin: 20px 350px;
+            background-image: url(../static/images/AI_image3.jfif);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .mainheading {
+            text-align: center;
+        }
+
+        .outerbox {
+            border: 1px solid black;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+        }
+
+
+        .secondlastouterbox {
+            margin: 12px 6px;
+        }
+
+        .inputs {
+            margin: 15px 5px;
+        }
+
+        .inputfield {
+            border-radius: 10px;
+            margin-top: 5px;
+            width: 98%;
+            padding: 5px;
+            background-color: rgba(0, 0, 0, 0.2);
+            color: white;
+        }
+
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            /* This removes the default styling/appearance */
+            margin: 0;
+            /* Important to remove any default margin that might leave a gap */
+        }
+
+        input[type="text"]:focus,
+        input[type="number"]:focus {
+            outline: none;
+            border-color: rgba(255, 255, 255, 0.5);
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+
+        select {
+            background-color: rgba(0, 0, 0, 0.6);
+            /* Transparent dark */
+            color: white;
+            padding: 6px;
+            border-radius: 6px;
+        }
+
+        .button_wrapper {
+            text-align: center;
+        }
+
+        .predict {
+            font-size: 20px;
+            padding: 10px 100px;
+            border-radius: 10px;
+            border: none;
+            background-color: red;
+            color: rgb(0, 0, 0);
+        }
+
+        .predict:hover {
+
+            background-color: rgb(233, 22, 22);
+            cursor: pointer;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outerbox">
+        <h1 class="mainheading">AI House Price Prediction Model </h1>
+        <hr>
+        <h2 class="mainheading">Enter Your Property Details</h2>
+        <hr>
+        <form class="secondlastouterbox" action="/predict" method="POST">
+            <div class="inputs">
+                <label class="inputs" for="sqft">Square Footage:</label>
+                <input class="inputfield" type="number" name="sqft" placeholder="Type a number" required>
+            </div>
+
+            <div class="inputs">
+                <label class="inputs" for="bedrooms">Bedrooms:</label>
+                <input class="inputfield" type="number" name="bedrooms" placeholder="Type a number" required>
+            </div>
+
+            <div class="inputs">
+                <label class="inputs" for="bathrooms">Bathrooms:</label>
+                <input class="inputfield" type="number" name="bathrooms" placeholder="Type a number" required>
+            </div>
+
+            <div class="inputs">
+                <label class="inputs" for="location">Location:</label>
+                <input class="inputfield" type="text" name="location" placeholder="Enter city name" required>
+            </div>
+
+            <div class="inputs">
+                <label class="inputs" for="property_type">Property Type:</label>
+                <select name="property_type" required>
+                    <option value="small_house">Small House</option>
+                    <option value="villa">Villa</option>
+                    <option value="duplex">Duplex</option>
+                    <option value="bungalow">Bungalow</option>
+                </select>
+            </div>
+
+            <div class="inputs">
+                <label class="inputs" for="year_built">Year Built:</label>
+                <input class="inputfield" type="number" name="year_built" placeholder="Enter property age" required>
+            </div>
+
+            <div class="radio">
+                <label class="inputs">Parking:</label><br>
+                <input type="radio" id="parking-yes" name="parking" value="Yes" required>
+                <label for="parking-yes">Yes</label>
+
+                <input type="radio" id="parking-no" name="parking" value="No">
+                <label for="parking-no">No</label>
+            </div>
+
+
+
+            <div class="inputs">
+                <label class="inputs" for="basement_finish">Basement Finish Type:</label>
+                <select name="basement_finish">
+                    <option value="Unfinished">Unfinished</option>
+                    <option value="Low">Low</option>
+                    <option value="Average">Average</option>
+                    <option value="Recreation">Recreation</option>
+                    <option value="Good">Good</option>
+                </select>
+            </div>
+
+
+            <div class="inputs">
+                <label class="inputs" for="condition">Condition:</label>
+                <select name="condition" required>
+                    <option value="Excellent">Excellent</option>
+                    <option value="Good">Good</option>
+                    <option value="Fair">Fair</option>
+                    <option value="Poor">Poor</option>
+                </select>
+            </div>
+
+
+            <div class="inputs">
+                <label class="inputs" for="view">View:</label>
+                <input class="inputfield" type="text" name="view"
+                    placeholder="How was the exterior view of the property? ">
+            </div>
+
+            <div class="button_wrapper">
+                <button class="predict" type="submit">Predict</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

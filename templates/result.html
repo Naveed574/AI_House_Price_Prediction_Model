@@ -1,0 +1,57 @@
+<!-- templates/result.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+            url('../static/images/AI_image3.jfif') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .result-container {
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+        }
+
+        .result-container h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .result-container a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #1f8ef1;
+            padding: 10px 20px;
+            border-radius: 10px;
+            transition: background 0.3s ease;
+        }
+
+        .result-container a:hover {
+            background-color: #0d6efd;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-container">
+        <h3>Predicted Value: {{ prediction }}</h3>
+        <a href="/form">Go Back</a>
+    </div>
+</body>
+</html>

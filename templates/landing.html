@@ -1,0 +1,49 @@
+<!-- templates/landing.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to House Price Predictor</title>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 200px;
+            font-family: Arial, sans-serif;
+            background-image: url(../static/images/AI_IMAGE.avif);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 400px;
+            color: white;
+        }
+
+
+        button {
+            font-size: 20px;
+            padding: 10px 30px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 900;
+        }
+
+        button:hover {
+            background-color: #45a049;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>WELCOME TO THE AI HOUSE PRICE PREDICTION APP</h1>
+    <p>Click below to get started</p>
+    <form action="/form">
+        <button type="submit">Get Started</button>
+    </form>
+</body>
+
+</html>

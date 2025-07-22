@@ -1,0 +1,35 @@
+# Ignore virtual environments
+env/
+venv/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# Ignore Jupyter notebook checkpoints (if you use notebooks)
+.ipynb_checkpoints/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Model files
+*.pkl
+*.h5
+*.sav
+*.joblib
+
+# Data files (optional)
+*.csv
+*.xlsx
+*.json
+
+# IDE/editor config folders
+.vscode/
+.idea/
+
+# Flask/instance config (optional if you use instance folders)
+instance/
